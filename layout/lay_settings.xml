@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/popbackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/app_bar"
+        />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginHorizontal="@dimen/_10sdp">
+
+            <RelativeLayout
+                android:id="@+id/layoutSound"
+                android:background="@drawable/c_shape_bg"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:paddingHorizontal="@dimen/_10sdp">
+
+                <ToggleButton
+                    android:id="@+id/switchSound"
+                    android:background="@drawable/cb_selector"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:checked="true"
+                    android:backgroundTint="@color/black"
+                    android:textOn=""
+                    android:textOff=""
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"/>
+
+                <TextView
+                    android:textSize="@dimen/_11sdp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/play_sound_animation"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:background="@drawable/c_shape_bg"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:paddingHorizontal="@dimen/_10sdp">
+
+                <Spinner
+                    android:id="@+id/spinnerDuration"
+                    android:layout_width="67dp"
+                    android:layout_height="29dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="0dp"
+                    android:background="@drawable/c_shape_bg" />
+
+                <ImageView
+                    android:background="@drawable/ic_back"
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:layout_centerVertical="true"
+                    android:rotation="270"
+                    android:layout_marginLeft="-10dp"
+                    android:backgroundTint="@color/black"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_alignParentEnd="true"/>
+
+                <TextView
+                    android:textSize="@dimen/_11sdp"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/play_duration"
+                    android:textStyle="bold"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:background="@drawable/c_shape_bg"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:paddingHorizontal="@dimen/_10sdp">
+
+                <Spinner
+                    android:id="@+id/spinnerClosingMethod"
+                    android:background="@drawable/c_shape_bg"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"/>
+
+                <ImageView
+                    android:background="@drawable/ic_back"
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:layout_centerVertical="true"
+                    android:rotation="270"
+                    android:focusable="true"
+                    android:backgroundTint="@color/black"
+                    android:focusableInTouchMode="true"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_alignParentEnd="true"/>
+
+                <TextView
+                    android:textSize="@dimen/_11sdp"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/closing_method"
+                    android:textStyle="bold"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:background="@drawable/c_shape_bg"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:paddingHorizontal="@dimen/_10sdp">
+
+                <ToggleButton
+                    android:id="@+id/switchLock"
+                    android:background="@drawable/cb_selector"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:checked="false"
+                    android:backgroundTint="@color/black"
+                    android:textOn=""
+                    android:textOff=""
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"/>
+
+                <TextView
+                    android:textSize="@dimen/_11sdp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/show_only_lock_screen"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:background="@drawable/c_shape_bg"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:paddingHorizontal="@dimen/_10sdp">
+
+                <ToggleButton
+                    android:id="@+id/switchPer"
+                    android:background="@drawable/cb_selector"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:checked="true"
+                    android:backgroundTint="@color/black"
+                    android:textOn=""
+                    android:textOff=""
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"/>
+
+                <TextView
+                    android:textSize="@dimen/_11sdp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/show_battery_per"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:background="@drawable/c_shape_bg"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:paddingHorizontal="@dimen/_10sdp">
+
+                <ToggleButton
+                    android:id="@+id/switchShow"
+                    android:background="@drawable/cb_selector"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:checked="true"
+                    android:backgroundTint="@color/black"
+                    android:textOn=""
+                    android:textOff=""
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"/>
+
+                <TextView
+                    android:textSize="@dimen/_11sdp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/show_animation"
+                    android:layout_centerVertical="true"
+                    tools:ignore="RelativeOverlap" />
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:gravity="center"
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingRight="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:paddingHorizontal="@dimen/_10sdp">
+
+        <ImageView
+            android:id="@+id/backArrow"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:src="@drawable/ic_back"
+            android:layout_centerVertical="true"
+            app:contentPadding="@dimen/_6sdp"
+            app:tint="@color/purple" />
+
+        <TextView
+            android:textSize="@dimen/_13sdp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:id="@+id/title" android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:singleLine="true"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/backArrow"/>
+    </RelativeLayout>
+</LinearLayout>
